@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useUsers from "../../hooks/useUsers";
+import { Link } from "react-router-dom";
 
 function UserInfo(props) {
   const { id } = props;
@@ -20,7 +21,9 @@ function UserInfo(props) {
     </div>
   ) : (
     <div className="flex space-x-3 text-base text-gray-500">
-      <p className="hover:underline hover:cursor-pointer">{user.data.name}</p>
+      <Link to={`/user/${id}`}>
+        <p className="hover:underline hover:cursor-pointer">{user.data.name}</p>
+      </Link>
       <p>{user.data.company.name}</p>
     </div>
   );
