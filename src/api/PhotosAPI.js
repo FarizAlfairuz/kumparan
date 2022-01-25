@@ -6,11 +6,11 @@ const PhotosAPI = {
     },
 
     getUserAlbums(id) {
-        return API.get(`/users/${id}/album`)
+        return API.get(`/users/${id}/albums`)
     },
 
     getSingleAlbum(id) {
-        return API.get(`/album/${id}/photos`)
+        return API.get(`/albums/${id}/photos`)
     },
 }
 
