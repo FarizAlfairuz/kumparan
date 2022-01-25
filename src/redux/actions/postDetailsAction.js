@@ -1,10 +1,10 @@
 import { FETCH_POST_DETAILS_REQUEST, FETCH_POST_DETAILS_SUCCESS, FETCH_POST_DETAILS_FAILED } from "../types/postDetailsType"
 import PostsAPI from '../../api/PostsAPI'
 
-export const fetchPostDetailss = () => {
+export const fetchPostDetails = (id) => {
   return (dispatch) => {
     dispatch(fetchPostDetailsRequest)
-    PostsAPI.getPostDetailss()
+    PostsAPI.getSinglePost(id)
     .then((res) => {
       dispatch(fetchPostDetailsSuccess(res.data))
     })

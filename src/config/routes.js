@@ -9,6 +9,13 @@ export const routes = [
         component: Home,
     },
     {
+        name: "Post",
+        path: () => {
+            return "/post";
+        },
+        component: Home,
+    },
+    {
         name: "PhotoDetails",
         path: () => {
             return "/photo/:id";

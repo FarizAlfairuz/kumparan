@@ -8,6 +8,7 @@ module.exports = function override(config) {
     '@config' : 'src/config',
     '@api' : 'src/api',
     '@hooks' : 'src/hooks',
+    '@redux' : 'src/redux',
   })(config)
 
   return config
