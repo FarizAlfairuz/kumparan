@@ -14,8 +14,9 @@ function PostDetailsPage() {
 
   useEffect(() => {
     dispatch(fetchPostDetails(params.id));
-
   }, [dispatch, params.id]);
+
+  console.log(details.post);
 
   return (
     <Layout width="w-5/6 md:w-3/5">
@@ -25,11 +26,18 @@ function PostDetailsPage() {
         </div>
       ) : (
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold text-ellipsis overflow-hidden">{details.post.title}</h1>
-          <UserInfo id={details.post.userId} />
-          <p className="text-lg">
-            {details.post.body}
-          </p>
+          <h1 className="text-4xl font-bold text-ellipsis overflow-hidden">
+            {details.post.title}
+          </h1>
+          {details.post.userId === undefined ? (
+            <div className="animate-pulse w-full flex space-x-3 text-sm">
+              <div className="h-3 bg-gray-300 w-1/4 rounded-sm"></div>
+              <div className="h-3 bg-gray-300 w-2/5 rounded-sm"></div>
+            </div>
+          ) : (
+            <UserInfo id={details.post.userId} />
+          )}
+          <p className="text-lg">{details.post.body}</p>
           <CommentCards id={params.id} />
         </div>
       )}

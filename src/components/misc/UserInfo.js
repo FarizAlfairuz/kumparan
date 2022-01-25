@@ -13,7 +13,6 @@ function UserInfo(props) {
     return () => {
       dispatch({ type: 'RESET' })
     }
-
   }, [getSingleUser, id, dispatch]);
 
   return user.loading ? (
