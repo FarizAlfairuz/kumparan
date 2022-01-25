@@ -14,6 +14,7 @@ function PostDetailsPage() {
 
   useEffect(() => {
     dispatch(fetchPostDetails(params.id));
+
   }, [dispatch, params.id]);
 
   return (

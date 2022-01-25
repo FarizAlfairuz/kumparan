@@ -3,12 +3,15 @@ import useComments from "@hooks/useComments";
 
 function CommentCards(props) {
   const { id } = props;
-  const { comments, getComments } = useComments();
+  const { comments, getComments, dispatch } = useComments();
 
   useEffect(() => {
     getComments(id);
 
-  }, [getComments, id]);
+    return () => {
+      dispatch({ type: 'RESET' })
+    }
+  }, [getComments, id, dispatch]);
 
   return (
     <div className="w-full md:w-3/4 space-y-3">
