@@ -15,7 +15,7 @@ function CommentCards(props) {
 
   return (
     <div className="w-full md:w-3/4 space-y-3">
-      <h6>Comments</h6>
+      <h6 className="font-bold text-xl">Comments</h6>
       {comments.loading ? (
         <div className="bg-gray-400 rounded-md py-8 px-6 space-y-2 animate-pulse"></div>
       ) : (
