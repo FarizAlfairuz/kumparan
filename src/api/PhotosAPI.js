@@ -12,6 +12,10 @@ const PhotosAPI = {
     getSingleAlbum(id) {
         return API.get(`/albums/${id}/photos`)
     },
+
+    getSinglePhoto(id) {
+        return API.get('/photos/' + id)
+    }
 }
 
 export default PhotosAPI
