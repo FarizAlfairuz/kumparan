@@ -6,7 +6,7 @@ import {
   
   const initialState = {
     loading: false,
-    post: [],
+    album: [],
     error: "",
   };
   
@@ -21,14 +21,14 @@ import {
       case FETCH_ALBUMS_SUCCESS:
         return {
           loading: false,
-          post: action.payload,
+          album: action.payload,
           error: "",
         };
   
       case FETCH_ALBUMS_FAILED:
         return {
           ...state,
-          post: [],
+          album: [],
           error: action.payload,
         };
       default:

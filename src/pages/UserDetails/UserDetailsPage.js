@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Layout from "@components/Layout";
 import useUsers from "@hooks/useUsers";
 import { useParams } from "react-router-dom";
-import AlbumCards from "@components/cards/AlbumCards";
+import AlbumsList from "@components/cards/AlbumsList";
 
 function UserDetailsPage() {
   const params = useParams();
@@ -58,7 +58,7 @@ function UserDetailsPage() {
       )}
       <div className="bg-white rounded-lg w-full shadow-md px-6 py-8 space-y-6">
         <div>Albums</div>
-        <AlbumCards />
+        <AlbumsList id={user.data.id} />
       </div>
     </Layout>
   );

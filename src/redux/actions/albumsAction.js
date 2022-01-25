@@ -1,10 +1,10 @@
 import { FETCH_ALBUMS_REQUEST, FETCH_ALBUMS_SUCCESS, FETCH_ALBUMS_FAILED } from "../types/albumsType"
-import PostsAPI from '../../api/PostsAPI'
+import PhotosAPI from "../../api/PhotosAPI"
 
 export const fetchAlbums = (id) => {
   return (dispatch) => {
     dispatch(fetchAlbumsRequest)
-    PostsAPI.getSinglePost(id)
+    PhotosAPI.getUserAlbums(id)
     .then((res) => {
       dispatch(fetchAlbumsSuccess(res.data))
     })
