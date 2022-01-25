@@ -16,8 +16,6 @@ function PostDetailsPage() {
     dispatch(fetchPostDetails(params.id));
   }, [dispatch, params.id]);
 
-  console.log(details.post);
-
   return (
     <Layout width="w-5/6 md:w-3/5">
       {details.loading ? (
