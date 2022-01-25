@@ -17,14 +17,14 @@ function PostDetailsPage() {
   }, [dispatch, params.id]);
 
   return (
-    <Layout width="w-3/5">
+    <Layout width="w-5/6 md:w-3/5">
       {details.loading ? (
         <div className="flex justify-center items-center h-screen w-full">
           <GridLoader size={30} margin={2} color="teal" />
         </div>
       ) : (
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">{details.post.title}</h1>
+          <h1 className="text-4xl font-bold text-ellipsis overflow-hidden">{details.post.title}</h1>
           <UserInfo id={params.id} />
           <p className="text-lg">
             {details.post.body}
