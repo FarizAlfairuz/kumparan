@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Layout from "@components/Layout";
 import useUsers from "@hooks/useUsers";
 import { useParams } from "react-router-dom";
+import AlbumCards from "@components/cards/AlbumCards";
 
 function UserDetailsPage() {
   const params = useParams();
@@ -56,8 +57,8 @@ function UserDetailsPage() {
         </div>
       )}
       <div className="bg-white rounded-lg w-full shadow-md px-6 py-8 space-y-6">
-        <div>Album</div>
-        
+        <div>Albums</div>
+        <AlbumCards />
       </div>
     </Layout>
   );
