@@ -25,7 +25,7 @@ function PostDetailsPage() {
       ) : (
         <div className="space-y-4">
           <h1 className="text-4xl font-bold text-ellipsis overflow-hidden">{details.post.title}</h1>
-          <UserInfo id={params.id} />
+          <UserInfo id={details.post.userId} />
           <p className="text-lg">
             {details.post.body}
           </p>

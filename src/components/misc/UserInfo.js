@@ -4,15 +4,12 @@ import { Link } from "react-router-dom";
 
 function UserInfo(props) {
   const { id } = props;
-  const { user, getSingleUser, dispatch } = useUsers();
+  const { user, getSingleUser } = useUsers();
 
   useEffect(() => {
     getSingleUser(id);
 
-    return () => {
-      dispatch({ type: "RESET" });
-    };
-  }, [dispatch, getSingleUser, id]);
+  }, [getSingleUser, id]);
 
   return user.loading ? (
     <div className="animate-pulse w-full flex space-x-3 text-sm">
