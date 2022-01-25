@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  posts: [],
+  post: [],
   error: "",
 };
 
@@ -21,14 +21,14 @@ const postDetailsReducer = (state = initialState, action) => {
     case FETCH_POST_DETAILS_SUCCESS:
       return {
         loading: false,
-        posts: action.payload,
+        post: action.payload,
         error: "",
       };
 
     case FETCH_POST_DETAILS_FAILED:
       return {
         ...state,
-        posts: [],
+        post: [],
         error: action.payload,
       };
     default:

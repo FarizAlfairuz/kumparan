@@ -24,10 +24,10 @@ function PostDetailsPage() {
         </div>
       ) : (
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold">{details.posts.title}</h1>
+          <h1 className="text-4xl font-bold">{details.post.title}</h1>
           <UserInfo id={params.id} />
           <p className="text-lg">
-            {details.posts.body}
+            {details.post.body}
           </p>
           <CommentCards id={params.id} />
         </div>
