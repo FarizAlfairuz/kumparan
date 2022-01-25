@@ -7,6 +7,10 @@ const PostsAPI = {
 
     getSinglePost(id) {
         return API.get('/posts/' + id)
+    },
+
+    getComments(id) {
+        return API.get(`/posts/${id}/comments`)
     }
 }
 

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchPostDetails } from "@redux/actions/postDetailsAction";
 import { GridLoader } from "react-spinners";
 import UserInfo from "@components/misc/UserInfo";
+import CommentCards from "@components/cards/CommentCards";
 
 function PostDetailsPage() {
   const params = useParams();
@@ -28,10 +29,7 @@ function PostDetailsPage() {
           <p className="text-lg">
             {details.posts.body}
           </p>
-          <div className="w-3/4 bg-red-300">
-              <h6>Comments</h6>
-              <div></div>
-          </div>
+          <CommentCards id={params.id} />
         </div>
       )}
     </Layout>

@@ -20,7 +20,7 @@ function UserInfo(props) {
     </div>
   ) : (
     <div className="flex space-x-3 text-base text-gray-500">
-      <p>{user.data.name}</p>
+      <p className="hover:underline hover:cursor-pointer">{user.data.name}</p>
       <p>{user.data.company.name}</p>
     </div>
   );
